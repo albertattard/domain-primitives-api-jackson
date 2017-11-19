@@ -7,7 +7,7 @@
 	<artifactId>domain-objects-api-jackson</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<name>Domain Objects API Jackson</name>
+	<name>Domain Objects API - Jackson Extension</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
