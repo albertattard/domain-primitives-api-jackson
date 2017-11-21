@@ -1,4 +1,4 @@
-package com.javacreed.api.domain.objects.jackson;
+package com.javacreed.api.domain.objects.jackson.mandatory;
 
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
@@ -7,11 +7,11 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.google.common.base.Preconditions;
-import com.javacreed.api.domain.objects.LocalDateTimeBasedDomainObject;
+import com.javacreed.api.domain.objects.mandatory.LocalDateTimeBasedDomainObject;
 
 public class LocalDateTimeBasedDomainObjectSerializer extends StdSerializer<LocalDateTimeBasedDomainObject> {
 
-  private static final long serialVersionUID = -4177941765070689788L;
+  private static final long serialVersionUID = 8554163143068267829L;
 
   private final DateTimeFormatter formatter;
 
@@ -27,12 +27,6 @@ public class LocalDateTimeBasedDomainObjectSerializer extends StdSerializer<Loca
   @Override
   public void serialize(final LocalDateTimeBasedDomainObject object, final JsonGenerator generator,
       final SerializerProvider provider) throws IOException {
-    final String formatted = object.format(formatter).orElse(null);
-    if (formatted != null) {
-      generator.writeString(formatted);
-      return;
-    }
-
-    generator.writeNull();
+    generator.writeString(object.format(formatter));
   }
 }
