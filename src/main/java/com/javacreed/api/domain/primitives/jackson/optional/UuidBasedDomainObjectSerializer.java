@@ -1,11 +1,11 @@
-package com.javacreed.api.domain.objects.jackson.mandatory;
+package com.javacreed.api.domain.primitives.jackson.optional;
 
 import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
-import com.javacreed.api.domain.objects.mandatory.UuidBasedDomainObject;
+import com.javacreed.api.domain.primitives.optional.UuidBasedDomainObject;
 
 public class UuidBasedDomainObjectSerializer extends StdSerializer<UuidBasedDomainObject> {
 
@@ -18,6 +18,10 @@ public class UuidBasedDomainObjectSerializer extends StdSerializer<UuidBasedDoma
   @Override
   public void serialize(final UuidBasedDomainObject object, final JsonGenerator generator,
       final SerializerProvider provider) throws IOException {
-    generator.writeString(object.toFormattedString());
+    if (object.isValuePresent()) {
+      generator.writeString(object.getNullableFormatted());
+    } else {
+      generator.writeNull();
+    }
   }
 }

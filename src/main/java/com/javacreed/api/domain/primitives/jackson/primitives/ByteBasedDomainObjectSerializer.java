@@ -1,11 +1,11 @@
-package com.javacreed.api.domain.objects.jackson.primitives;
+package com.javacreed.api.domain.primitives.jackson.primitives;
 
 import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
-import com.javacreed.api.domain.objects.primitives.ByteBasedDomainObject;
+import com.javacreed.api.domain.primitives.lang.ByteBasedDomainObject;
 
 public class ByteBasedDomainObjectSerializer extends StdSerializer<ByteBasedDomainObject> {
 

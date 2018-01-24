@@ -4,12 +4,12 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.javacreed.api</groupId>
-	<artifactId>domain-objects-api-jackson</artifactId>
+	<artifactId>domain-primitives-api-jackson</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<name>Domain Objects API - Jackson Extension</name>
-	<description>This project provides integration between the domain objects API and Jackson libraries</description>
-	<url>https://github.com/javacreed/domain-objects-api-jackson</url>
+	<name>Domain Primitives API - Jackson Extension</name>
+	<description>This project provides integration between the domain primitives API and Jackson libraries</description>
+	<url>https://github.com/javacreed/domain-primitives-api-jackson</url>
 	<inceptionYear>2017</inceptionYear>
 
 	<contributors>
@@ -28,9 +28,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:git://github.com/javacreed/domain-objects-api-jackson.git</connection>
-		<developerConnection>scm:git:git://github.com/javacreed/domain-objects-api-jackson.git</developerConnection>
-		<url>https://github.com/javacreed/domain-objects-api-jackson</url>
+		<connection>scm:git:git://github.com/javacreed/domain-primitives-api-jackson.git</connection>
+		<developerConnection>scm:git:git://github.com/javacreed/domain-primitives-api-jackson.git</developerConnection>
+		<url>https://github.com/javacreed/domain-primitives-api-jackson</url>
 	</scm>
 
 	<properties>

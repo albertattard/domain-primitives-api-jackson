@@ -1,4 +1,4 @@
-package com.javacreed.api.domain.objects.jackson.mandatory;
+package com.javacreed.api.domain.primitives.jackson.mandatory;
 
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.google.common.base.Preconditions;
-import com.javacreed.api.domain.objects.mandatory.ZonedDateTimeBasedDomainObject;
+import com.javacreed.api.domain.primitives.mandatory.ZonedDateTimeBasedDomainObject;
 
 public class ZonedDateTimeBasedDomainObjectSerializer extends StdSerializer<ZonedDateTimeBasedDomainObject> {
 

@@ -1,4 +1,4 @@
-package com.javacreed.api.domain.objects.jackson.optional;
+package com.javacreed.api.domain.primitives.jackson.optional;
 
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.google.common.base.Preconditions;
-import com.javacreed.api.domain.objects.optional.LocalDateTimeBasedDomainObject;
+import com.javacreed.api.domain.primitives.optional.LocalDateTimeBasedDomainObject;
 
 public class LocalDateTimeBasedDomainObjectSerializer extends StdSerializer<LocalDateTimeBasedDomainObject> {
 
