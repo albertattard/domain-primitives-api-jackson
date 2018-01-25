@@ -5,18 +5,18 @@ import java.io.IOException;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
-import com.javacreed.api.domain.primitives.lang.ShortBasedDomainObject;
+import com.javacreed.api.domain.primitives.lang.ShortBasedDomainPrimitive;
 
-public class ShortBasedDomainObjectSerializer extends StdSerializer<ShortBasedDomainObject> {
+public class ShortBasedDomainPrimitiveSerializer extends StdSerializer<ShortBasedDomainPrimitive> {
 
   private static final long serialVersionUID = 8891937760663822768L;
 
-  public ShortBasedDomainObjectSerializer() {
-    super(ShortBasedDomainObject.class);
+  public ShortBasedDomainPrimitiveSerializer() {
+    super(ShortBasedDomainPrimitive.class);
   }
 
   @Override
-  public void serialize(final ShortBasedDomainObject object, final JsonGenerator generator,
+  public void serialize(final ShortBasedDomainPrimitive object, final JsonGenerator generator,
       final SerializerProvider provider) throws IOException {
     generator.writeNumber(object.getValue());
   }

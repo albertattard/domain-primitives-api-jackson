@@ -5,21 +5,21 @@ import java.io.IOException;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
-import com.javacreed.api.domain.primitives.optional.StringBasedDomainObject;
+import com.javacreed.api.domain.primitives.optional.UuidBasedDomainPrimitive;
 
-public class StringBasedDomainObjectSerializer extends StdSerializer<StringBasedDomainObject> {
+public class UuidBasedDomainPrimitiveSerializer extends StdSerializer<UuidBasedDomainPrimitive> {
 
   private static final long serialVersionUID = -4177941765070689788L;
 
-  public StringBasedDomainObjectSerializer() {
-    super(StringBasedDomainObject.class);
+  public UuidBasedDomainPrimitiveSerializer() {
+    super(UuidBasedDomainPrimitive.class);
   }
 
   @Override
-  public void serialize(final StringBasedDomainObject object, final JsonGenerator generator,
+  public void serialize(final UuidBasedDomainPrimitive object, final JsonGenerator generator,
       final SerializerProvider provider) throws IOException {
     if (object.isValuePresent()) {
-      generator.writeString(object.getValue().get());
+      generator.writeString(object.getNullableFormatted());
     } else {
       generator.writeNull();
     }
