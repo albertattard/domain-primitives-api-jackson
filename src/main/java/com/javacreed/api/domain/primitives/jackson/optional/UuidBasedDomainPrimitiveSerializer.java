@@ -19,7 +19,7 @@ public class UuidBasedDomainPrimitiveSerializer extends StdSerializer<UuidBasedD
   public void serialize(final UuidBasedDomainPrimitive object, final JsonGenerator generator,
       final SerializerProvider provider) throws IOException {
     if (object.isValuePresent()) {
-      generator.writeString(object.getNullableFormatted());
+      generator.writeString(object.toNullableFormattedString());
     } else {
       generator.writeNull();
     }
